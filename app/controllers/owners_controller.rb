@@ -5,6 +5,7 @@ class OwnersController < ApplicationController
     erb :'/owners/index'
   end
 
+  # Display a new form to fill out.
   get '/owners/new' do
     @pets = Pet.all
     erb :'/owners/new'
