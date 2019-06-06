@@ -15,7 +15,7 @@ class OwnersController < ApplicationController
   # Add and save the information from the form to the database
   post '/owners' do
     @owner = Owner.create(params[:owner])
-    # binding.pry
+    binding.pry
     if !params["pet"]["name"].empty?
       @owner.pets << Pet.create(name: params["pet"]["name"])
     end
@@ -28,7 +28,7 @@ class OwnersController < ApplicationController
     @owner = Owner.find(params[:id])
     erb :'/owners/show'
   end
-  
+
   # Display a form to modify a previous Record
   get '/owners/:id/edit' do
     @owner = Owner.find(params[:id])
