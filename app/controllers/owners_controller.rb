@@ -36,7 +36,7 @@ class OwnersController < ApplicationController
   end
 
   # Add the modified information to the database
-  post '/owners/:id' do
+  patch '/owners/:id' do
     @owner = Owner.find(params[:id])
     @owner.update(params["owner"])
     if !params["pet"]["name"].empty?
