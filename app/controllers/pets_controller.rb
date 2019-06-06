@@ -30,6 +30,7 @@ class PetsController < ApplicationController
     erb :'/pets/show'
   end
 
+  # Display a form to modify a previous Record
   get '/pets/:id/edit' do
     @pet = Pet.find(params[:id])
     erb :'/pets/edit'
