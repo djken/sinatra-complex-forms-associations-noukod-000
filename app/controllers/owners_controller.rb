@@ -14,7 +14,7 @@ class OwnersController < ApplicationController
   # Add the information from the form to the database
   post '/owners' do
     @owner = Owner.create(params[:owner])
-    binding.pry
+    # binding.pry
     if !params["pet"]["name"].empty?
       @owner.pets << Pet.create(name: params["pet"]["name"])
     end
