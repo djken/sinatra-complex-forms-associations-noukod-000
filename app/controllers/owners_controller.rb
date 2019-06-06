@@ -23,6 +23,7 @@ class OwnersController < ApplicationController
     redirect to "owners/#{@owner.id}"
   end
 
+  # Display a form to modify a previous Record
   get '/owners/:id/edit' do
     @owner = Owner.find(params[:id])
     erb :'/owners/edit'
