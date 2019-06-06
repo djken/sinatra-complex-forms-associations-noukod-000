@@ -6,6 +6,7 @@ class PetsController < ApplicationController
     erb :'/pets/index'
   end
 
+  # Display a new form to fill out.
   get '/pets/new' do
     erb :'/pets/new'
   end
