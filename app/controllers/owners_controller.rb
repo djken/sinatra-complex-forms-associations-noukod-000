@@ -35,7 +35,7 @@ class OwnersController < ApplicationController
     erb :'/owners/show'
   end
 
-  # Add the modified information to the database
+  # Add and save the modified information to the database
   patch '/owners/:id' do
     @owner = Owner.find(params[:id])
     @owner.update(params["owner"])
