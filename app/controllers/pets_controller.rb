@@ -17,6 +17,7 @@ class PetsController < ApplicationController
     redirect to "pets/#{@pet.id}"
   end
 
+  # Display a form to modify a previous Record
   get '/pets/:id' do
     @pet = Pet.find(params[:id])
     erb :'/pets/show'
