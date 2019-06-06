@@ -11,7 +11,7 @@ class OwnersController < ApplicationController
     erb :'/owners/new'
   end
 
-  # Add the information from the form to 
+  # Add the information from the form to the database
   post '/owners' do
     @owner = Owner.create(params[:owner])
     binding.pry
