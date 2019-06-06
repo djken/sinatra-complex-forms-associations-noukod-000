@@ -1,5 +1,6 @@
 class OwnersController < ApplicationController
 
+  # Display what is in the index file from views/owners folders.
   get '/owners' do
     @owners = Owner.all
     erb :'/owners/index'
