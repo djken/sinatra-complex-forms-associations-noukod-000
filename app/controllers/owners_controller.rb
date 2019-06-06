@@ -29,6 +29,7 @@ class OwnersController < ApplicationController
     erb :'/owners/edit'
   end
 
+  # Go the get the previous information from the database to get it modify
   get '/owners/:id' do
     @owner = Owner.find(params[:id])
     erb :'/owners/show'
