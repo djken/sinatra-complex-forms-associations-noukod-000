@@ -1,5 +1,6 @@
 class PetsController < ApplicationController
 
+  # Display what is in the index file from views/owners folders.
   get '/pets' do
     @pets = Pet.all
     erb :'/pets/index' 
