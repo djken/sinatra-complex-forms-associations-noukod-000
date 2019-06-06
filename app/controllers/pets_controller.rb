@@ -11,8 +11,9 @@ class PetsController < ApplicationController
     erb :'/pets/new'
   end
 
+  # Add and save the information from the form to the database
   post '/pets' do
-
+    
     redirect to "pets/#{@pet.id}"
   end
 
